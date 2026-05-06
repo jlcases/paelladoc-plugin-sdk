@@ -1,0 +1,20 @@
+{
+  "schema_version": "1",
+  "id": "dev.paelladoc.aider-adapter",
+  "name": "Aider Adapter",
+  "version": "0.1.0",
+  "publisher": "PAELLADOC",
+  "license": "MIT",
+  "homepage": "https://aider.chat/",
+  "description": "Adds Aider as a local coding CLI adapter and ships a review skill.",
+  "permissions": {
+    "repo_read": true,
+    "repo_write": true,
+    "network": false,
+    "shell": ["aider"]
+  },
+  "contributes": {
+    "skills": ["skills/review-with-aider.md"],
+    "engine_adapters": ["engines/aider.json"]
+  }
+}

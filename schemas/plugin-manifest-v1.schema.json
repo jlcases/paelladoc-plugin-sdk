@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.paelladoc.com/plugin-manifest-v1.schema.json",
+  "title": "PAELLADOC Plugin Manifest v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "id",
+    "name",
+    "version",
+    "publisher",
+    "license",
+    "description",
+    "permissions",
+    "contributes"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9.-]{2,127}$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+(?:[-+][A-Za-z0-9.-]+)?$"
+    },
+    "publisher": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80
+    },
+    "license": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 40
+    },
+    "homepage": {
+      "type": "string",
+      "maxLength": 240
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 400
+    },
+    "permissions": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "repo_read": {
+          "type": "boolean",
+          "default": false
+        },
+        "repo_write": {
+          "type": "boolean",
+          "default": false
+        },
+        "network": {
+          "oneOf": [
+            { "type": "boolean" },
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 120
+              },
+              "uniqueItems": true
+            }
+          ],
+          "default": false
+        },
+        "shell": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._+-]{0,79}$"
+          },
+          "uniqueItems": true,
+          "default": []
+        }
+      }
+    },
+    "contributes": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "skills": { "$ref": "#/$defs/paths" },
+        "mcp_servers": { "$ref": "#/$defs/paths" },
+        "engine_adapters": { "$ref": "#/$defs/paths" },
+        "templates": { "$ref": "#/$defs/paths" },
+        "validators": { "$ref": "#/$defs/paths" },
+        "panels": { "$ref": "#/$defs/paths" }
+      }
+    }
+  },
+  "$defs": {
+    "paths": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 240,
+        "not": {
+          "anyOf": [
+            { "pattern": "^/" },
+            { "pattern": "(^|/)\\.\\.(/|$)" }
+          ]
+        }
+      },
+      "uniqueItems": true
+    }
+  }
+}

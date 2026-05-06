@@ -1,0 +1,20 @@
+{
+  "schema_version": "1",
+  "name": "aider",
+  "label": "Aider",
+  "binary": "aider",
+  "auth": {
+    "kind": "api_key_or_provider_config",
+    "status_command": ["aider", "--version"],
+    "login_url": "https://aider.chat/docs/llms.html"
+  },
+  "install": {
+    "docs_url": "https://aider.chat/docs/install.html",
+    "commands": ["python -m pip install aider-install"]
+  },
+  "capabilities": ["edit", "review", "run_tests"],
+  "execution": {
+    "mode": "terminal",
+    "command": ["aider"]
+  }
+}
