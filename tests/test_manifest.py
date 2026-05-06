@@ -18,6 +18,7 @@ def base_manifest() -> dict[str, object]:
     return {
         "schema_version": "1",
         "id": "dev.example.plugin",
+        "plugin_type": "skill_pack",
         "name": "Example",
         "version": "0.1.0",
         "publisher": "Example",
@@ -39,6 +40,7 @@ def test_valid_manifest(tmp_path: Path) -> None:
     manifest = validate_plugin_dir(tmp_path)
 
     assert manifest.plugin_id == "dev.example.plugin"
+    assert manifest.plugin_type == "skill_pack"
     assert manifest.contributes["skills"] == (Path("skills/review.md"),)
 
 
@@ -66,4 +68,13 @@ def test_rejects_shell_snippet_permission(tmp_path: Path) -> None:
     write_plugin(tmp_path, manifest)
 
     with pytest.raises(ManifestError, match="command names"):
+        validate_plugin_dir(tmp_path)
+
+
+def test_rejects_unknown_plugin_type(tmp_path: Path) -> None:
+    manifest = base_manifest()
+    manifest["plugin_type"] = "brain_plugin"
+    write_plugin(tmp_path, manifest)
+
+    with pytest.raises(ManifestError, match="Unknown plugin_type"):
         validate_plugin_dir(tmp_path)

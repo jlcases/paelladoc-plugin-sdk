@@ -1,0 +1,21 @@
+{
+  "schema_version": "1",
+  "id": "dev.paelladoc.github-mcp-pack",
+  "plugin_type": "mcp_pack",
+  "name": "GitHub MCP Pack",
+  "version": "0.1.0",
+  "publisher": "PAELLADOC",
+  "license": "MIT",
+  "homepage": "https://github.com/",
+  "description": "Declares GitHub MCP wiring and a PR review workflow skill.",
+  "permissions": {
+    "repo_read": true,
+    "repo_write": false,
+    "network": ["github.com", "api.github.com"],
+    "shell": ["npx"]
+  },
+  "contributes": {
+    "skills": ["skills/pr-review.md"],
+    "mcp_servers": ["mcp/github.json"]
+  }
+}

@@ -7,6 +7,7 @@
   "required": [
     "schema_version",
     "id",
+    "plugin_type",
     "name",
     "version",
     "publisher",
@@ -22,6 +23,17 @@
     "id": {
       "type": "string",
       "pattern": "^[a-z0-9][a-z0-9.-]{2,127}$"
+    },
+    "plugin_type": {
+      "type": "string",
+      "enum": [
+        "method_pack",
+        "stack_pack",
+        "agent_adapter",
+        "mcp_pack",
+        "validator_pack",
+        "skill_pack"
+      ]
     },
     "name": {
       "type": "string",

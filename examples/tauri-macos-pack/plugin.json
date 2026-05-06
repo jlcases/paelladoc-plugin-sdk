@@ -1,0 +1,22 @@
+{
+  "schema_version": "1",
+  "id": "dev.paelladoc.tauri-macos-pack",
+  "plugin_type": "validator_pack",
+  "name": "Tauri macOS Pack",
+  "version": "0.1.0",
+  "publisher": "PAELLADOC",
+  "license": "MIT",
+  "homepage": "https://v2.tauri.app/",
+  "description": "Release, signing, updater, and smoke-test checks for Tauri macOS apps.",
+  "permissions": {
+    "repo_read": true,
+    "repo_write": false,
+    "network": false,
+    "shell": ["bash", "cargo", "pnpm", "hdiutil", "codesign", "spctl"]
+  },
+  "contributes": {
+    "skills": ["skills/macos-release-review.md"],
+    "templates": ["templates/macos-release-checklist.md"],
+    "validators": ["validators/macos-release-gates.json"]
+  }
+}

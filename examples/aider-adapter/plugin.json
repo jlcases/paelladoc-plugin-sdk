@@ -1,6 +1,7 @@
 {
   "schema_version": "1",
   "id": "dev.paelladoc.aider-adapter",
+  "plugin_type": "agent_adapter",
   "name": "Aider Adapter",
   "version": "0.1.0",
   "publisher": "PAELLADOC",

@@ -16,6 +16,15 @@ orchestration, licensing, updater, and privacy enforcement stay inside the app.
 - Validators such as test, lint, build, and release checks.
 - Declarative panels in future versions.
 
+## Plugin Types
+
+- `method_pack`: PRD, epic, user story, acceptance criteria, and review methods.
+- `stack_pack`: framework-specific templates, skills, and validators.
+- `agent_adapter`: support for a coding agent CLI.
+- `mcp_pack`: MCP server declarations and setup guidance.
+- `validator_pack`: quality gates and release checks.
+- `skill_pack`: reusable agent instructions and workflows.
+
 ## What Plugins Cannot Access
 
 - Raw KG indexes.
@@ -47,6 +56,7 @@ contribution keys, or closed-core access attempts are rejected.
 {
   "schema_version": "1",
   "id": "dev.example.my-plugin",
+  "plugin_type": "skill_pack",
   "name": "My Plugin",
   "version": "0.1.0",
   "publisher": "Example",

@@ -28,6 +28,17 @@ ALLOWED_CONTRIBUTION_KEYS = frozenset(
     }
 )
 
+ALLOWED_PLUGIN_TYPES = frozenset(
+    {
+        "method_pack",
+        "stack_pack",
+        "agent_adapter",
+        "mcp_pack",
+        "validator_pack",
+        "skill_pack",
+    }
+)
+
 FORBIDDEN_CORE_KEYS = frozenset(
     {
         "kg",
@@ -57,6 +68,7 @@ class ManifestError(ValueError):
 class PluginManifest:
     schema_version: str
     plugin_id: str
+    plugin_type: str
     name: str
     version: str
     publisher: str
@@ -87,6 +99,7 @@ def validate_manifest_payload(raw: Any, *, root: Path) -> PluginManifest:
     required = {
         "schema_version",
         "id",
+        "plugin_type",
         "name",
         "version",
         "publisher",
@@ -117,6 +130,7 @@ def validate_manifest_payload(raw: Any, *, root: Path) -> PluginManifest:
     return PluginManifest(
         schema_version=schema_version,
         plugin_id=plugin_id,
+        plugin_type=_plugin_type(raw["plugin_type"]),
         name=_bounded_string(raw["name"], "name", max_len=80),
         version=version,
         publisher=_bounded_string(raw["publisher"], "publisher", max_len=80),
@@ -162,6 +176,14 @@ def _validate_permissions(raw: Any) -> dict[str, Any]:
         "network": network,
         "shell": tuple(shell),
     }
+
+
+def _plugin_type(raw: Any) -> str:
+    value = _string(raw, "plugin_type")
+    if value not in ALLOWED_PLUGIN_TYPES:
+        allowed = ", ".join(sorted(ALLOWED_PLUGIN_TYPES))
+        raise ManifestError(f"Unknown plugin_type: {value}. Expected one of: {allowed}")
+    return value
 
 
 def _validate_contributions(raw: Any, *, root: Path) -> dict[str, tuple[Path, ...]]:

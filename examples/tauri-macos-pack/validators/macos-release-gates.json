@@ -1,0 +1,9 @@
+{
+  "schema_version": "1",
+  "name": "macos-release-gates",
+  "commands": [
+    { "name": "tauri-build", "command": ["cargo", "tauri", "build"] },
+    { "name": "codesign-check", "command": ["codesign", "--verify", "--deep", "--strict"] },
+    { "name": "gatekeeper-check", "command": ["spctl", "--assess", "--type", "execute"] }
+  ]
+}

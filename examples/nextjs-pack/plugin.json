@@ -1,0 +1,22 @@
+{
+  "schema_version": "1",
+  "id": "dev.paelladoc.nextjs-pack",
+  "plugin_type": "stack_pack",
+  "name": "Next.js Pack",
+  "version": "0.1.0",
+  "publisher": "PAELLADOC",
+  "license": "MIT",
+  "homepage": "https://nextjs.org/",
+  "description": "Skills, templates, and validators for production Next.js projects.",
+  "permissions": {
+    "repo_read": true,
+    "repo_write": false,
+    "network": false,
+    "shell": ["pnpm", "npm", "npx"]
+  },
+  "contributes": {
+    "skills": ["skills/nextjs-review.md"],
+    "templates": ["templates/prd-nextjs-saas.md"],
+    "validators": ["validators/quality-gates.json"]
+  }
+}

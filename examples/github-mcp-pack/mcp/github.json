@@ -1,0 +1,10 @@
+{
+  "schema_version": "1",
+  "name": "github",
+  "transport": "stdio",
+  "command": "npx",
+  "args": ["-y", "@modelcontextprotocol/server-github"],
+  "env_keys": ["GITHUB_TOKEN"],
+  "targets": ["claude-code", "codex", "gemini", "opencode"],
+  "auth_required": true
+}

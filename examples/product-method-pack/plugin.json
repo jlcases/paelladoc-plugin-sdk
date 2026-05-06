@@ -1,0 +1,20 @@
+{
+  "schema_version": "1",
+  "id": "dev.paelladoc.product-method-pack",
+  "plugin_type": "method_pack",
+  "name": "Product Method Pack",
+  "version": "0.1.0",
+  "publisher": "PAELLADOC",
+  "license": "MIT",
+  "description": "PRD, epic, user story, and acceptance-criteria templates for AI-first product work.",
+  "permissions": {
+    "repo_read": false,
+    "repo_write": false,
+    "network": false,
+    "shell": []
+  },
+  "contributes": {
+    "skills": ["skills/story-splitting.md"],
+    "templates": ["templates/prd.md", "templates/user-story.md", "templates/acceptance-criteria.md"]
+  }
+}
