@@ -1,0 +1,22 @@
+{
+  "schema_version": "1",
+  "id": "dev.paelladoc.django-pack",
+  "plugin_type": "stack_pack",
+  "name": "Django Pack",
+  "version": "0.1.0",
+  "publisher": "PAELLADOC",
+  "license": "MIT",
+  "homepage": "https://www.djangoproject.com/",
+  "description": "Templates and validators for Django products with migrations, admin, and permissions.",
+  "permissions": {
+    "repo_read": true,
+    "repo_write": false,
+    "network": false,
+    "shell": ["python", "pytest", "ruff"]
+  },
+  "contributes": {
+    "skills": ["skills/django-review.md"],
+    "templates": ["templates/model-change.md"],
+    "validators": ["validators/quality-gates.json"]
+  }
+}

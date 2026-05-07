@@ -1,0 +1,9 @@
+{
+  "schema_version": "1",
+  "name": "django-quality-gates",
+  "commands": [
+    { "name": "check", "command": ["python", "manage.py", "check"] },
+    { "name": "migrations", "command": ["python", "manage.py", "makemigrations", "--check", "--dry-run"] },
+    { "name": "tests", "command": ["pytest", "-q"] }
+  ]
+}

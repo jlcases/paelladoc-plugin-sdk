@@ -1,0 +1,22 @@
+{
+  "schema_version": "1",
+  "id": "dev.paelladoc.rails-pack",
+  "plugin_type": "stack_pack",
+  "name": "Rails Pack",
+  "version": "0.1.0",
+  "publisher": "PAELLADOC",
+  "license": "MIT",
+  "homepage": "https://rubyonrails.org/",
+  "description": "Templates and validators for Rails products with Active Record, jobs, and system tests.",
+  "permissions": {
+    "repo_read": true,
+    "repo_write": false,
+    "network": false,
+    "shell": ["rails", "bundle"]
+  },
+  "contributes": {
+    "skills": ["skills/rails-review.md"],
+    "templates": ["templates/feature-change.md"],
+    "validators": ["validators/quality-gates.json"]
+  }
+}

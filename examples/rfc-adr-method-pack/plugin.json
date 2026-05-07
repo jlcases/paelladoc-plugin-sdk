@@ -1,0 +1,20 @@
+{
+  "schema_version": "1",
+  "id": "dev.paelladoc.rfc-adr-method-pack",
+  "plugin_type": "method_pack",
+  "name": "RFC/ADR Method Pack",
+  "version": "0.1.0",
+  "publisher": "PAELLADOC",
+  "license": "MIT",
+  "description": "RFC and Architecture Decision Record templates for engineering-led teams.",
+  "permissions": {
+    "repo_read": true,
+    "repo_write": false,
+    "network": false,
+    "shell": []
+  },
+  "contributes": {
+    "skills": ["skills/decision-review.md"],
+    "templates": ["templates/rfc.md", "templates/adr.md", "templates/migration-rfc.md"]
+  }
+}

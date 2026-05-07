@@ -1,0 +1,9 @@
+{
+  "schema_version": "1",
+  "name": "rails-quality-gates",
+  "commands": [
+    { "name": "tests", "command": ["rails", "test"] },
+    { "name": "db-migrate-status", "command": ["rails", "db:migrate:status"] },
+    { "name": "bundle-check", "command": ["bundle", "check"] }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "schema_version": "1",
+  "id": "dev.paelladoc.jtbd-method-pack",
+  "plugin_type": "method_pack",
+  "name": "Jobs To Be Done Method Pack",
+  "version": "0.1.0",
+  "publisher": "PAELLADOC",
+  "license": "MIT",
+  "description": "JTBD templates and skills for teams that frame work around progress, situations, and forces instead of user stories.",
+  "permissions": {
+    "repo_read": false,
+    "repo_write": false,
+    "network": false,
+    "shell": []
+  },
+  "contributes": {
+    "skills": ["skills/jtbd-framing.md"],
+    "templates": ["templates/job-story.md", "templates/forces.md", "templates/outcome-map.md"]
+  }
+}

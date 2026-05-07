@@ -18,7 +18,7 @@ orchestration, licensing, updater, and privacy enforcement stay inside the app.
 
 ## Plugin Types
 
-- `method_pack`: PRD, epic, user story, acceptance criteria, and review methods.
+- `method_pack`: product/development methods such as User Stories, JTBD, Shape Up, RFCs, ADRs, and review flows.
 - `stack_pack`: framework-specific templates, skills, and validators.
 - `agent_adapter`: support for a coding agent CLI.
 - `mcp_pack`: MCP server declarations and setup guidance.
@@ -49,6 +49,24 @@ paelladoc-plugin validate examples/aider-adapter
 
 The validator fails closed: invalid manifests, unsafe paths, unknown
 contribution keys, or closed-core access attempts are rejected.
+
+## Reference Packs
+
+- `aider-adapter`: agent CLI adapter.
+- `github-mcp-pack`: MCP pack for PR/repo metadata.
+- `nextjs-pack`: stack pack for Next.js.
+- `fastapi-pack`: stack pack for Python APIs.
+- `django-pack`: stack pack for Django products.
+- `rails-pack`: stack pack for Rails products.
+- `tauri-macos-pack`: release validator pack for macOS desktop apps.
+- `product-method-pack`: classic PRD/user-story method pack.
+- `jtbd-method-pack`: Jobs To Be Done method pack.
+- `shape-up-method-pack`: Shape Up pitch/cycle method pack.
+- `rfc-adr-method-pack`: RFC/ADR method pack for engineering decisions.
+
+Method packs are allowed to expose the user's preferred planning language.
+PAELLADOC can map them into internal artifacts later without forcing everyone
+to write user stories.
 
 ## Minimal Manifest
 

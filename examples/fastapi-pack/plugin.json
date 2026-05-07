@@ -1,0 +1,22 @@
+{
+  "schema_version": "1",
+  "id": "dev.paelladoc.fastapi-pack",
+  "plugin_type": "stack_pack",
+  "name": "FastAPI Pack",
+  "version": "0.1.0",
+  "publisher": "PAELLADOC",
+  "license": "MIT",
+  "homepage": "https://fastapi.tiangolo.com/",
+  "description": "Skills, API templates, and validators for production FastAPI services.",
+  "permissions": {
+    "repo_read": true,
+    "repo_write": false,
+    "network": false,
+    "shell": ["pytest", "ruff", "alembic", "python"]
+  },
+  "contributes": {
+    "skills": ["skills/fastapi-review.md"],
+    "templates": ["templates/api-change.md"],
+    "validators": ["validators/quality-gates.json"]
+  }
+}

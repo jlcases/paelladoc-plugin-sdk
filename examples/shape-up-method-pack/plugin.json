@@ -1,0 +1,20 @@
+{
+  "schema_version": "1",
+  "id": "dev.paelladoc.shape-up-method-pack",
+  "plugin_type": "method_pack",
+  "name": "Shape Up Method Pack",
+  "version": "0.1.0",
+  "publisher": "PAELLADOC",
+  "license": "MIT",
+  "description": "Shape Up pitches, appetites, scopes, hill charts, and circuit breakers for teams that avoid backlog-heavy planning.",
+  "permissions": {
+    "repo_read": false,
+    "repo_write": false,
+    "network": false,
+    "shell": []
+  },
+  "contributes": {
+    "skills": ["skills/shape-pitch.md"],
+    "templates": ["templates/pitch.md", "templates/scope-map.md", "templates/bets.md"]
+  }
+}
