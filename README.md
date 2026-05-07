@@ -10,6 +10,8 @@ orchestration, licensing, updater, and privacy enforcement stay inside the app.
 ## What Plugins Can Contribute
 
 - Skills and workflows.
+- Method definitions that rename artifact types, tabs, menus, and sidebar language.
+- Stack definitions for framework-specific defaults.
 - MCP server definitions.
 - Agent engine adapters.
 - Project templates.
@@ -64,9 +66,10 @@ contribution keys, or closed-core access attempts are rejected.
 - `shape-up-method-pack`: Shape Up pitch/cycle method pack.
 - `rfc-adr-method-pack`: RFC/ADR method pack for engineering decisions.
 
-Method packs are allowed to expose the user's preferred planning language.
-PAELLADOC can map them into internal artifacts later without forcing everyone
-to write user stories.
+Method packs expose the user's preferred planning language. PAELLADOC maps
+those definitions into internal artifacts at runtime, so a compiled DMG can
+load new method packs without rebuilding the app. Manifests and pack contracts
+are JSON. Append-only execution traces and bulk event streams should use JSONL.
 
 ## Minimal Manifest
 

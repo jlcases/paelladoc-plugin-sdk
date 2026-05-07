@@ -14,6 +14,7 @@
     "shell": []
   },
   "contributes": {
+    "methods": ["methods/product.json"],
     "skills": ["skills/story-splitting.md"],
     "templates": ["templates/prd.md", "templates/user-story.md", "templates/acceptance-criteria.md"]
   }

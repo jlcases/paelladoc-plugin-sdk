@@ -19,12 +19,15 @@ MANIFEST_FILE = "plugin.json"
 
 ALLOWED_CONTRIBUTION_KEYS = frozenset(
     {
+        "methods",
+        "stacks",
         "skills",
         "mcp_servers",
         "engine_adapters",
         "templates",
         "validators",
         "panels",
+        "commands",
     }
 )
 

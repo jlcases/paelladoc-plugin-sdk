@@ -1,0 +1,31 @@
+{
+  "schema_version": "1",
+  "method": {
+    "key": "product_classic",
+    "label": "Product Classic",
+    "description": "PRD, Epic, User Story, and Acceptance Criteria.",
+    "artifact_types": [
+      { "key": "prd", "label": "PRD", "short_label": "PRD", "canonical_type": "prd", "role": "problem" },
+      { "key": "epic", "label": "Epic", "short_label": "EPIC", "canonical_type": "epic", "role": "scope" },
+      { "key": "user_story", "label": "User Story", "short_label": "US", "canonical_type": "user_story", "role": "work_item" },
+      { "key": "acceptance_criteria", "label": "Acceptance Criteria", "short_label": "AC", "canonical_type": "acceptance_criteria", "role": "validation" }
+    ],
+    "navigation": {
+      "sidebar_label": "Artifacts",
+      "group_label": "Epic",
+      "hierarchy_label": "PRD -> Epic -> US -> AC",
+      "tabs": [
+        { "key": "all", "label": "All", "roles": [], "artifact_types": [] },
+        { "key": "scope", "label": "Scope", "roles": ["problem", "scope"], "artifact_types": [] },
+        { "key": "work", "label": "Work", "roles": ["work_item", "task"], "artifact_types": [] },
+        { "key": "validation", "label": "Validation", "roles": ["validation", "release_gate"], "artifact_types": [] }
+      ],
+      "menu_items": [
+        { "key": "new_prd", "label": "PRD", "artifact_type": "prd" },
+        { "key": "new_epic", "label": "Epic", "artifact_type": "epic" },
+        { "key": "new_user_story", "label": "User Story", "artifact_type": "user_story" },
+        { "key": "new_acceptance_criteria", "label": "Acceptance Criteria", "artifact_type": "acceptance_criteria" }
+      ]
+    }
+  }
+}

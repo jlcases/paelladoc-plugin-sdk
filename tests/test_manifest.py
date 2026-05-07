@@ -10,7 +10,9 @@ from paelladoc_plugin_sdk import ManifestError, validate_plugin_dir
 
 def write_plugin(root: Path, manifest: dict[str, object]) -> None:
     (root / "skills").mkdir(parents=True)
+    (root / "methods").mkdir(parents=True)
     (root / "skills" / "review.md").write_text("# Review\n", encoding="utf-8")
+    (root / "methods" / "jtbd.json").write_text("{}", encoding="utf-8")
     (root / "plugin.json").write_text(json.dumps(manifest), encoding="utf-8")
 
 
@@ -51,6 +53,18 @@ def test_rejects_closed_core_contribution(tmp_path: Path) -> None:
 
     with pytest.raises(ManifestError, match="Closed-core"):
         validate_plugin_dir(tmp_path)
+
+
+def test_accepts_method_contributions(tmp_path: Path) -> None:
+    manifest = base_manifest()
+    manifest["plugin_type"] = "method_pack"
+    manifest["contributes"] = {"methods": ["methods/jtbd.json"]}
+    write_plugin(tmp_path, manifest)
+
+    loaded = validate_plugin_dir(tmp_path)
+
+    assert loaded.plugin_type == "method_pack"
+    assert loaded.contributes["methods"] == (Path("methods/jtbd.json"),)
 
 
 def test_rejects_path_traversal(tmp_path: Path) -> None:

@@ -14,6 +14,7 @@
     "shell": []
   },
   "contributes": {
+    "methods": ["methods/jtbd.json"],
     "skills": ["skills/jtbd-framing.md"],
     "templates": ["templates/job-story.md", "templates/forces.md", "templates/outcome-map.md"]
   }

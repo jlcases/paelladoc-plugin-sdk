@@ -1,0 +1,30 @@
+{
+  "schema_version": "1",
+  "method": {
+    "key": "shape_up",
+    "label": "Shape Up",
+    "description": "Pitches, scopes, bets, and appetite validation.",
+    "artifact_types": [
+      { "key": "pitch", "label": "Pitch", "short_label": "PITCH", "canonical_type": "prd", "role": "problem" },
+      { "key": "scope", "label": "Scope", "short_label": "SCOPE", "canonical_type": "epic", "role": "scope" },
+      { "key": "bet", "label": "Bet", "short_label": "BET", "canonical_type": "user_story", "role": "work_item" },
+      { "key": "appetite", "label": "Appetite", "short_label": "APPETITE", "canonical_type": "acceptance_criteria", "role": "validation" }
+    ],
+    "navigation": {
+      "sidebar_label": "Bets",
+      "group_label": "Scope",
+      "hierarchy_label": "Pitch -> Scope -> Bet -> Appetite",
+      "tabs": [
+        { "key": "all", "label": "All", "roles": [], "artifact_types": [] },
+        { "key": "shaping", "label": "Shaping", "roles": ["problem", "scope"], "artifact_types": [] },
+        { "key": "bets", "label": "Bets", "roles": ["work_item", "task"], "artifact_types": [] },
+        { "key": "risks", "label": "Risks", "roles": ["risk", "decision"], "artifact_types": [] }
+      ],
+      "menu_items": [
+        { "key": "new_pitch", "label": "Pitch", "artifact_type": "pitch" },
+        { "key": "new_scope", "label": "Scope", "artifact_type": "scope" },
+        { "key": "new_bet", "label": "Bet", "artifact_type": "bet" }
+      ]
+    }
+  }
+}

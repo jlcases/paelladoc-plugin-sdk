@@ -1,0 +1,29 @@
+{
+  "schema_version": "1",
+  "method": {
+    "key": "jtbd",
+    "label": "Jobs To Be Done",
+    "description": "Forces, job stories, and measurable outcomes.",
+    "artifact_types": [
+      { "key": "forces", "label": "Forces", "short_label": "FORCES", "canonical_type": "prd", "role": "problem" },
+      { "key": "job_area", "label": "Job Area", "short_label": "AREA", "canonical_type": "epic", "role": "scope" },
+      { "key": "job_story", "label": "Job Story", "short_label": "JOB", "canonical_type": "user_story", "role": "work_item" },
+      { "key": "outcome_map", "label": "Outcome Map", "short_label": "OUTCOME", "canonical_type": "acceptance_criteria", "role": "validation" }
+    ],
+    "navigation": {
+      "sidebar_label": "Jobs",
+      "group_label": "Job Area",
+      "hierarchy_label": "Forces -> Job Area -> Job Story -> Outcome",
+      "tabs": [
+        { "key": "all", "label": "All", "roles": [], "artifact_types": [] },
+        { "key": "jobs", "label": "Jobs", "roles": ["problem", "scope", "work_item"], "artifact_types": [] },
+        { "key": "outcomes", "label": "Outcomes", "roles": ["validation", "release_gate"], "artifact_types": [] }
+      ],
+      "menu_items": [
+        { "key": "new_forces", "label": "Forces", "artifact_type": "forces" },
+        { "key": "new_job_story", "label": "Job Story", "artifact_type": "job_story" },
+        { "key": "new_outcome_map", "label": "Outcome Map", "artifact_type": "outcome_map" }
+      ]
+    }
+  }
+}

@@ -105,12 +105,15 @@
       "type": "object",
       "additionalProperties": false,
       "properties": {
+        "methods": { "$ref": "#/$defs/paths" },
+        "stacks": { "$ref": "#/$defs/paths" },
         "skills": { "$ref": "#/$defs/paths" },
         "mcp_servers": { "$ref": "#/$defs/paths" },
         "engine_adapters": { "$ref": "#/$defs/paths" },
         "templates": { "$ref": "#/$defs/paths" },
         "validators": { "$ref": "#/$defs/paths" },
-        "panels": { "$ref": "#/$defs/paths" }
+        "panels": { "$ref": "#/$defs/paths" },
+        "commands": { "$ref": "#/$defs/paths" }
       }
     }
   },
