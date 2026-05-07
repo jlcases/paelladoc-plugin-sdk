@@ -5,10 +5,10 @@
     "label": "Product Classic",
     "description": "PRD, Epic, User Story, and Acceptance Criteria.",
     "artifact_types": [
-      { "key": "prd", "label": "PRD", "short_label": "PRD", "canonical_type": "prd", "role": "problem" },
-      { "key": "epic", "label": "Epic", "short_label": "EPIC", "canonical_type": "epic", "role": "scope" },
-      { "key": "user_story", "label": "User Story", "short_label": "US", "canonical_type": "user_story", "role": "work_item" },
-      { "key": "acceptance_criteria", "label": "Acceptance Criteria", "short_label": "AC", "canonical_type": "acceptance_criteria", "role": "validation" }
+      { "key": "prd", "label": "PRD", "short_label": "PRD", "canonical_type": "prd", "role": "problem", "template_path": "templates/prd.md" },
+      { "key": "epic", "label": "Epic", "short_label": "EPIC", "canonical_type": "epic", "role": "scope", "template_path": "templates/epic.md" },
+      { "key": "user_story", "label": "User Story", "short_label": "US", "canonical_type": "user_story", "role": "work_item", "template_path": "templates/user-story.md" },
+      { "key": "acceptance_criteria", "label": "Acceptance Criteria", "short_label": "AC", "canonical_type": "acceptance_criteria", "role": "validation", "template_path": "templates/acceptance-criteria.md" }
     ],
     "navigation": {
       "sidebar_label": "Artifacts",

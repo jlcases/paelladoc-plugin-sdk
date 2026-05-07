@@ -5,10 +5,10 @@
     "label": "Shape Up",
     "description": "Pitches, scopes, bets, and appetite validation.",
     "artifact_types": [
-      { "key": "pitch", "label": "Pitch", "short_label": "PITCH", "canonical_type": "prd", "role": "problem" },
-      { "key": "scope", "label": "Scope", "short_label": "SCOPE", "canonical_type": "epic", "role": "scope" },
-      { "key": "bet", "label": "Bet", "short_label": "BET", "canonical_type": "user_story", "role": "work_item" },
-      { "key": "appetite", "label": "Appetite", "short_label": "APPETITE", "canonical_type": "acceptance_criteria", "role": "validation" }
+      { "key": "pitch", "label": "Pitch", "short_label": "PITCH", "canonical_type": "prd", "role": "problem", "template_path": "templates/pitch.md" },
+      { "key": "scope", "label": "Scope", "short_label": "SCOPE", "canonical_type": "epic", "role": "scope", "template_path": "templates/scope-map.md" },
+      { "key": "bet", "label": "Bet", "short_label": "BET", "canonical_type": "user_story", "role": "work_item", "template_path": "templates/bets.md" },
+      { "key": "appetite", "label": "Appetite", "short_label": "APPETITE", "canonical_type": "acceptance_criteria", "role": "validation", "template_path": "templates/appetite.md" }
     ],
     "navigation": {
       "sidebar_label": "Bets",

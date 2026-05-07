@@ -10,7 +10,7 @@ orchestration, licensing, updater, and privacy enforcement stay inside the app.
 ## What Plugins Can Contribute
 
 - Skills and workflows.
-- Method definitions that rename artifact types, tabs, menus, and sidebar language.
+- Method definitions that rename artifact types, tabs, menus, sidebar language, and artifact templates.
 - Stack definitions for framework-specific defaults.
 - MCP server definitions.
 - Agent engine adapters.
@@ -70,6 +70,11 @@ Method packs expose the user's preferred planning language. PAELLADOC maps
 those definitions into internal artifacts at runtime, so a compiled DMG can
 load new method packs without rebuilding the app. Manifests and pack contracts
 are JSON. Append-only execution traces and bulk event streams should use JSONL.
+
+Each method artifact type maps plugin vocabulary onto a closed PAELLADOC
+artifact type through `canonical_type`. Optional `template_path` entries point
+to Markdown files inside the plugin root; PAELLADOC uses them to prefill newly
+created artifacts while the artifact instance itself is stored in the app DB.
 
 ## Minimal Manifest
 

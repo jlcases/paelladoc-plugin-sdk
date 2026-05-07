@@ -16,6 +16,6 @@
   "contributes": {
     "methods": ["methods/jtbd.json"],
     "skills": ["skills/jtbd-framing.md"],
-    "templates": ["templates/job-story.md", "templates/forces.md", "templates/outcome-map.md"]
+    "templates": ["templates/job-story.md", "templates/forces.md", "templates/job-area.md", "templates/outcome-map.md"]
   }
 }

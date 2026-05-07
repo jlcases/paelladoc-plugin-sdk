@@ -16,6 +16,6 @@
   "contributes": {
     "methods": ["methods/shape-up.json"],
     "skills": ["skills/shape-pitch.md"],
-    "templates": ["templates/pitch.md", "templates/scope-map.md", "templates/bets.md"]
+    "templates": ["templates/pitch.md", "templates/scope-map.md", "templates/bets.md", "templates/appetite.md"]
   }
 }

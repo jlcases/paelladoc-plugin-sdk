@@ -5,10 +5,10 @@
     "label": "RFC / ADR",
     "description": "RFCs, ADRs, migration notes, and release gates.",
     "artifact_types": [
-      { "key": "rfc", "label": "RFC", "short_label": "RFC", "canonical_type": "technical_spec", "role": "decision" },
-      { "key": "adr", "label": "ADR", "short_label": "ADR", "canonical_type": "decision_record", "role": "decision" },
-      { "key": "migration_rfc", "label": "Migration RFC", "short_label": "MIG RFC", "canonical_type": "prd", "role": "release_gate" },
-      { "key": "risk_note", "label": "Risk Note", "short_label": "RISK", "canonical_type": "risk", "role": "risk" }
+      { "key": "rfc", "label": "RFC", "short_label": "RFC", "canonical_type": "technical_spec", "role": "decision", "template_path": "templates/rfc.md" },
+      { "key": "adr", "label": "ADR", "short_label": "ADR", "canonical_type": "decision_record", "role": "decision", "template_path": "templates/adr.md" },
+      { "key": "migration_rfc", "label": "Migration RFC", "short_label": "MIG RFC", "canonical_type": "prd", "role": "release_gate", "template_path": "templates/migration-rfc.md" },
+      { "key": "risk_note", "label": "Risk Note", "short_label": "RISK", "canonical_type": "risk", "role": "risk", "template_path": "templates/risk-note.md" }
     ],
     "navigation": {
       "sidebar_label": "Decisions",
