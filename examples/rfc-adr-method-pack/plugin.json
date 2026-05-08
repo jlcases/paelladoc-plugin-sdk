@@ -16,6 +16,11 @@
   "contributes": {
     "methods": ["methods/rfc-adr.json"],
     "skills": ["skills/decision-review.md"],
-    "templates": ["templates/rfc.md", "templates/adr.md", "templates/migration-rfc.md", "templates/risk-note.md"]
+    "templates": [
+      "templates/rfc.md",
+      "templates/adr.md",
+      "templates/migration-rfc.md",
+      "templates/risk-note.md"
+    ]
   }
 }

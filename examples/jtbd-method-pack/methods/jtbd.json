@@ -5,20 +5,108 @@
     "label": "Jobs To Be Done",
     "description": "Forces, job stories, and measurable outcomes.",
     "artifact_types": [
-      { "key": "forces", "label": "Forces", "short_label": "FORCES", "canonical_type": "prd", "role": "problem", "template_path": "templates/forces.md" },
-      { "key": "job_area", "label": "Job Area", "short_label": "AREA", "canonical_type": "epic", "role": "scope", "template_path": "templates/job-area.md" },
-      { "key": "job_story", "label": "Job Story", "short_label": "JOB", "canonical_type": "user_story", "role": "work_item", "template_path": "templates/job-story.md" },
-      { "key": "outcome_map", "label": "Outcome Map", "short_label": "OUTCOME", "canonical_type": "acceptance_criteria", "role": "validation", "template_path": "templates/outcome-map.md" },
-      { "key": "e2e_test", "label": "E2E Test", "short_label": "E2E", "canonical_type": "e2e_test", "role": "release_gate" },
-      { "key": "design_task", "label": "Design Task", "short_label": "DESIGN", "canonical_type": "design_task", "role": "task" },
-      { "key": "engineering_task", "label": "Engineering Task", "short_label": "ENG", "canonical_type": "engineering_task", "role": "task" },
-      { "key": "technical_spec", "label": "Technical Spec", "short_label": "SPEC", "canonical_type": "technical_spec", "role": "decision" },
-      { "key": "decision_record", "label": "ADR", "short_label": "ADR", "canonical_type": "decision_record", "role": "decision" },
-      { "key": "technical_debt", "label": "Technical Debt", "short_label": "TECH DEBT", "canonical_type": "technical_debt", "role": "debt" },
-      { "key": "product_debt", "label": "Product Debt", "short_label": "PROD DEBT", "canonical_type": "product_debt", "role": "debt" },
-      { "key": "improvement", "label": "Improvement", "short_label": "IMPR", "canonical_type": "improvement", "role": "work_item" },
-      { "key": "maintenance_task", "label": "Maintenance Task", "short_label": "MAINT", "canonical_type": "maintenance_task", "role": "maintenance" },
-      { "key": "risk", "label": "Risk", "short_label": "RISK", "canonical_type": "risk", "role": "risk" }
+      {
+        "key": "forces",
+        "label": "Forces",
+        "short_label": "FORCES",
+        "canonical_type": "prd",
+        "role": "problem",
+        "template_path": "templates/forces.md"
+      },
+      {
+        "key": "job_area",
+        "label": "Job Area",
+        "short_label": "AREA",
+        "canonical_type": "epic",
+        "role": "scope",
+        "template_path": "templates/job-area.md"
+      },
+      {
+        "key": "job_story",
+        "label": "Job Story",
+        "short_label": "JOB",
+        "canonical_type": "user_story",
+        "role": "work_item",
+        "template_path": "templates/job-story.md"
+      },
+      {
+        "key": "outcome_map",
+        "label": "Outcome Map",
+        "short_label": "OUTCOME",
+        "canonical_type": "acceptance_criteria",
+        "role": "validation",
+        "template_path": "templates/outcome-map.md"
+      },
+      {
+        "key": "e2e_test",
+        "label": "E2E Test",
+        "short_label": "E2E",
+        "canonical_type": "e2e_test",
+        "role": "release_gate"
+      },
+      {
+        "key": "design_task",
+        "label": "Design Task",
+        "short_label": "DESIGN",
+        "canonical_type": "design_task",
+        "role": "task"
+      },
+      {
+        "key": "engineering_task",
+        "label": "Engineering Task",
+        "short_label": "ENG",
+        "canonical_type": "engineering_task",
+        "role": "task"
+      },
+      {
+        "key": "technical_spec",
+        "label": "Technical Spec",
+        "short_label": "SPEC",
+        "canonical_type": "technical_spec",
+        "role": "decision"
+      },
+      {
+        "key": "decision_record",
+        "label": "ADR",
+        "short_label": "ADR",
+        "canonical_type": "decision_record",
+        "role": "decision"
+      },
+      {
+        "key": "technical_debt",
+        "label": "Technical Debt",
+        "short_label": "TECH DEBT",
+        "canonical_type": "technical_debt",
+        "role": "debt"
+      },
+      {
+        "key": "product_debt",
+        "label": "Product Debt",
+        "short_label": "PROD DEBT",
+        "canonical_type": "product_debt",
+        "role": "debt"
+      },
+      {
+        "key": "improvement",
+        "label": "Improvement",
+        "short_label": "IMPR",
+        "canonical_type": "improvement",
+        "role": "work_item"
+      },
+      {
+        "key": "maintenance_task",
+        "label": "Maintenance Task",
+        "short_label": "MAINT",
+        "canonical_type": "maintenance_task",
+        "role": "maintenance"
+      },
+      {
+        "key": "risk",
+        "label": "Risk",
+        "short_label": "RISK",
+        "canonical_type": "risk",
+        "role": "risk"
+      }
     ],
     "navigation": {
       "sidebar_label": "Jobs",
@@ -26,14 +114,42 @@
       "hierarchy_label": "Forces -> Job Area -> Job Story -> Outcome",
       "tabs": [
         { "key": "all", "label": "All", "roles": [], "artifact_types": [] },
-        { "key": "jobs", "label": "Jobs", "roles": ["problem", "scope", "work_item"], "artifact_types": [] },
-        { "key": "outcomes", "label": "Outcomes", "roles": ["validation", "release_gate"], "artifact_types": [] },
-        { "key": "decisions", "label": "Decisions", "roles": ["decision", "risk"], "artifact_types": [] }
+        {
+          "key": "jobs",
+          "label": "Jobs",
+          "roles": ["problem", "scope", "work_item"],
+          "artifact_types": []
+        },
+        {
+          "key": "outcomes",
+          "label": "Outcomes",
+          "roles": ["validation", "release_gate"],
+          "artifact_types": []
+        },
+        {
+          "key": "decisions",
+          "label": "Decisions",
+          "roles": ["decision", "risk"],
+          "artifact_types": []
+        }
       ],
       "menu_items": [
         { "key": "new_forces", "label": "Forces", "artifact_type": "forces" },
-        { "key": "new_job_story", "label": "Job Story", "artifact_type": "job_story" },
-        { "key": "new_outcome_map", "label": "Outcome Map", "artifact_type": "outcome_map" }
+        {
+          "key": "new_job_area",
+          "label": "Job Area",
+          "artifact_type": "job_area"
+        },
+        {
+          "key": "new_job_story",
+          "label": "Job Story",
+          "artifact_type": "job_story"
+        },
+        {
+          "key": "new_outcome_map",
+          "label": "Outcome Map",
+          "artifact_type": "outcome_map"
+        }
       ]
     }
   }
