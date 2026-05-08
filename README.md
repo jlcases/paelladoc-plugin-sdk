@@ -50,7 +50,8 @@ paelladoc-plugin validate examples/aider-adapter
 ```
 
 The validator fails closed: invalid manifests, unsafe paths, unknown
-contribution keys, or closed-core access attempts are rejected.
+contribution keys, invalid method vocabularies, or closed-core access attempts
+are rejected.
 
 ## Reference Packs
 
@@ -61,10 +62,14 @@ contribution keys, or closed-core access attempts are rejected.
 - `django-pack`: stack pack for Django products.
 - `rails-pack`: stack pack for Rails products.
 - `tauri-macos-pack`: release validator pack for macOS desktop apps.
-- `product-method-pack`: classic PRD/user-story method pack.
+- `product-method-pack`: default `classic` PRD/user-story method pack.
 - `jtbd-method-pack`: Jobs To Be Done method pack.
 - `shape-up-method-pack`: Shape Up pitch/cycle method pack.
 - `rfc-adr-method-pack`: RFC/ADR method pack for engineering decisions.
+
+These four method packs are the public source of truth for the PAELLADOC
+default methods. The app may bundle them inside the DMG for offline startup,
+but the vocabulary contract lives here: no hidden Python-only planning methods.
 
 Method packs expose the user's preferred planning language. PAELLADOC maps
 those definitions into internal artifacts at runtime, so a compiled DMG can
@@ -75,6 +80,8 @@ Each method artifact type maps plugin vocabulary onto a closed PAELLADOC
 artifact type through `canonical_type`. Optional `template_path` entries point
 to Markdown files inside the plugin root; PAELLADOC uses them to prefill newly
 created artifacts while the artifact instance itself is stored in the app DB.
+Unknown canonical types are rejected by the SDK validator so plugin typos cannot
+surface broken tabs or create buttons in the app.
 
 ## Minimal Manifest
 

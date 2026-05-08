@@ -1,14 +1,24 @@
 {
   "schema_version": "1",
   "method": {
-    "key": "product_classic",
-    "label": "Product Classic",
+    "key": "classic",
+    "label": "Classic",
     "description": "PRD, Epic, User Story, and Acceptance Criteria.",
     "artifact_types": [
       { "key": "prd", "label": "PRD", "short_label": "PRD", "canonical_type": "prd", "role": "problem", "template_path": "templates/prd.md" },
       { "key": "epic", "label": "Epic", "short_label": "EPIC", "canonical_type": "epic", "role": "scope", "template_path": "templates/epic.md" },
       { "key": "user_story", "label": "User Story", "short_label": "US", "canonical_type": "user_story", "role": "work_item", "template_path": "templates/user-story.md" },
-      { "key": "acceptance_criteria", "label": "Acceptance Criteria", "short_label": "AC", "canonical_type": "acceptance_criteria", "role": "validation", "template_path": "templates/acceptance-criteria.md" }
+      { "key": "acceptance_criteria", "label": "Acceptance Criteria", "short_label": "AC", "canonical_type": "acceptance_criteria", "role": "validation", "template_path": "templates/acceptance-criteria.md" },
+      { "key": "e2e_test", "label": "E2E Test", "short_label": "E2E", "canonical_type": "e2e_test", "role": "release_gate" },
+      { "key": "design_task", "label": "Design Task", "short_label": "DESIGN", "canonical_type": "design_task", "role": "task" },
+      { "key": "engineering_task", "label": "Engineering Task", "short_label": "ENG", "canonical_type": "engineering_task", "role": "task" },
+      { "key": "technical_spec", "label": "Technical Spec", "short_label": "SPEC", "canonical_type": "technical_spec", "role": "decision" },
+      { "key": "decision_record", "label": "ADR", "short_label": "ADR", "canonical_type": "decision_record", "role": "decision" },
+      { "key": "technical_debt", "label": "Technical Debt", "short_label": "TECH DEBT", "canonical_type": "technical_debt", "role": "debt" },
+      { "key": "product_debt", "label": "Product Debt", "short_label": "PROD DEBT", "canonical_type": "product_debt", "role": "debt" },
+      { "key": "improvement", "label": "Improvement", "short_label": "IMPR", "canonical_type": "improvement", "role": "work_item" },
+      { "key": "maintenance_task", "label": "Maintenance Task", "short_label": "MAINT", "canonical_type": "maintenance_task", "role": "maintenance" },
+      { "key": "risk", "label": "Risk", "short_label": "RISK", "canonical_type": "risk", "role": "risk" }
     ],
     "navigation": {
       "sidebar_label": "Artifacts",
@@ -18,7 +28,8 @@
         { "key": "all", "label": "All", "roles": [], "artifact_types": [] },
         { "key": "scope", "label": "Scope", "roles": ["problem", "scope"], "artifact_types": [] },
         { "key": "work", "label": "Work", "roles": ["work_item", "task"], "artifact_types": [] },
-        { "key": "validation", "label": "Validation", "roles": ["validation", "release_gate"], "artifact_types": [] }
+        { "key": "validation", "label": "Validation", "roles": ["validation", "release_gate"], "artifact_types": [] },
+        { "key": "decisions", "label": "Decisions", "roles": ["decision", "risk"], "artifact_types": [] }
       ],
       "menu_items": [
         { "key": "new_prd", "label": "PRD", "artifact_type": "prd" },
