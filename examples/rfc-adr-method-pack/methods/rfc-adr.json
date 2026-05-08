@@ -5,20 +5,108 @@
     "label": "RFC / ADR",
     "description": "RFCs, ADRs, migration notes, and release gates.",
     "artifact_types": [
-      { "key": "rfc", "label": "RFC", "short_label": "RFC", "canonical_type": "technical_spec", "role": "decision", "template_path": "templates/rfc.md" },
-      { "key": "adr", "label": "ADR", "short_label": "ADR", "canonical_type": "decision_record", "role": "decision", "template_path": "templates/adr.md" },
-      { "key": "migration_rfc", "label": "Migration RFC", "short_label": "MIG RFC", "canonical_type": "prd", "role": "release_gate", "template_path": "templates/migration-rfc.md" },
-      { "key": "risk_note", "label": "Risk Note", "short_label": "RISK", "canonical_type": "risk", "role": "risk", "template_path": "templates/risk-note.md" },
-      { "key": "e2e_test", "label": "E2E Test", "short_label": "E2E", "canonical_type": "e2e_test", "role": "release_gate" },
-      { "key": "design_task", "label": "Design Task", "short_label": "DESIGN", "canonical_type": "design_task", "role": "task" },
-      { "key": "engineering_task", "label": "Engineering Task", "short_label": "ENG", "canonical_type": "engineering_task", "role": "task" },
-      { "key": "technical_spec", "label": "Technical Spec", "short_label": "SPEC", "canonical_type": "technical_spec", "role": "decision" },
-      { "key": "decision_record", "label": "ADR", "short_label": "ADR", "canonical_type": "decision_record", "role": "decision" },
-      { "key": "technical_debt", "label": "Technical Debt", "short_label": "TECH DEBT", "canonical_type": "technical_debt", "role": "debt" },
-      { "key": "product_debt", "label": "Product Debt", "short_label": "PROD DEBT", "canonical_type": "product_debt", "role": "debt" },
-      { "key": "improvement", "label": "Improvement", "short_label": "IMPR", "canonical_type": "improvement", "role": "work_item" },
-      { "key": "maintenance_task", "label": "Maintenance Task", "short_label": "MAINT", "canonical_type": "maintenance_task", "role": "maintenance" },
-      { "key": "risk", "label": "Risk", "short_label": "RISK", "canonical_type": "risk", "role": "risk" }
+      {
+        "key": "rfc",
+        "label": "RFC",
+        "short_label": "RFC",
+        "canonical_type": "technical_spec",
+        "role": "decision",
+        "template_path": "templates/rfc.md"
+      },
+      {
+        "key": "adr",
+        "label": "ADR",
+        "short_label": "ADR",
+        "canonical_type": "decision_record",
+        "role": "decision",
+        "template_path": "templates/adr.md"
+      },
+      {
+        "key": "migration_rfc",
+        "label": "Migration RFC",
+        "short_label": "MIG RFC",
+        "canonical_type": "prd",
+        "role": "release_gate",
+        "template_path": "templates/migration-rfc.md"
+      },
+      {
+        "key": "risk_note",
+        "label": "Risk Note",
+        "short_label": "RISK",
+        "canonical_type": "risk",
+        "role": "risk",
+        "template_path": "templates/risk-note.md"
+      },
+      {
+        "key": "e2e_test",
+        "label": "E2E Test",
+        "short_label": "E2E",
+        "canonical_type": "e2e_test",
+        "role": "release_gate"
+      },
+      {
+        "key": "design_task",
+        "label": "Design Task",
+        "short_label": "DESIGN",
+        "canonical_type": "design_task",
+        "role": "task"
+      },
+      {
+        "key": "engineering_task",
+        "label": "Engineering Task",
+        "short_label": "ENG",
+        "canonical_type": "engineering_task",
+        "role": "task"
+      },
+      {
+        "key": "technical_spec",
+        "label": "Technical Spec",
+        "short_label": "SPEC",
+        "canonical_type": "technical_spec",
+        "role": "decision"
+      },
+      {
+        "key": "decision_record",
+        "label": "ADR",
+        "short_label": "ADR",
+        "canonical_type": "decision_record",
+        "role": "decision"
+      },
+      {
+        "key": "technical_debt",
+        "label": "Technical Debt",
+        "short_label": "TECH DEBT",
+        "canonical_type": "technical_debt",
+        "role": "debt"
+      },
+      {
+        "key": "product_debt",
+        "label": "Product Debt",
+        "short_label": "PROD DEBT",
+        "canonical_type": "product_debt",
+        "role": "debt"
+      },
+      {
+        "key": "improvement",
+        "label": "Improvement",
+        "short_label": "IMPR",
+        "canonical_type": "improvement",
+        "role": "work_item"
+      },
+      {
+        "key": "maintenance_task",
+        "label": "Maintenance Task",
+        "short_label": "MAINT",
+        "canonical_type": "maintenance_task",
+        "role": "maintenance"
+      },
+      {
+        "key": "risk",
+        "label": "Risk",
+        "short_label": "RISK",
+        "canonical_type": "risk",
+        "role": "risk"
+      }
     ],
     "navigation": {
       "sidebar_label": "Decisions",
@@ -26,14 +114,33 @@
       "hierarchy_label": "RFC -> ADR -> Migration Gate",
       "tabs": [
         { "key": "all", "label": "All", "roles": [], "artifact_types": [] },
-        { "key": "rfcs", "label": "RFCs", "roles": ["decision"], "artifact_types": ["rfc"] },
-        { "key": "gates", "label": "Gates", "roles": ["release_gate"], "artifact_types": ["migration_rfc"] },
-        { "key": "risks", "label": "Risks", "roles": ["risk", "debt"], "artifact_types": [] }
+        {
+          "key": "rfcs",
+          "label": "RFCs",
+          "roles": ["decision"],
+          "artifact_types": ["rfc"]
+        },
+        {
+          "key": "gates",
+          "label": "Gates",
+          "roles": ["release_gate"],
+          "artifact_types": ["migration_rfc"]
+        },
+        {
+          "key": "risks",
+          "label": "Risks",
+          "roles": ["risk", "debt"],
+          "artifact_types": []
+        }
       ],
       "menu_items": [
         { "key": "new_rfc", "label": "RFC", "artifact_type": "rfc" },
         { "key": "new_adr", "label": "ADR", "artifact_type": "adr" },
-        { "key": "new_migration_rfc", "label": "Migration RFC", "artifact_type": "migration_rfc" }
+        {
+          "key": "new_migration_rfc",
+          "label": "Migration RFC",
+          "artifact_type": "migration_rfc"
+        }
       ]
     }
   }

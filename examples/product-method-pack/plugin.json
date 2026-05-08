@@ -16,6 +16,11 @@
   "contributes": {
     "methods": ["methods/product.json"],
     "skills": ["skills/story-splitting.md"],
-    "templates": ["templates/prd.md", "templates/epic.md", "templates/user-story.md", "templates/acceptance-criteria.md"]
+    "templates": [
+      "templates/prd.md",
+      "templates/epic.md",
+      "templates/user-story.md",
+      "templates/acceptance-criteria.md"
+    ]
   }
 }
